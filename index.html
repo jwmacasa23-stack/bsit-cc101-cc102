@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Wayne B. Macasa | BSIT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="logo" href="#home">My Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#java">Java Code</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow">BSIT STUDENT PORTFOLIO</p>
+            <h1>John Wayne B. Macasa</h1>
+            <p class="hero-text">A first-year Bachelor of Science in Information Technology student who is learning programming and developing computer skills.</p>
+            <a class="button" href="#about">Explore My Portfolio</a>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Personal Information</h2>
+            <div class="card">
+                <p><strong>Name:</strong> John Wayne B. Macasa</p>
+                <p><strong>Course:</strong> Bachelor of Science in Information Technology (BSIT)</p>
+                <p><strong>Year and Block:</strong> BSIT 1B</p>
+                <p><strong>Age:</strong> 18 years old</p>
+                <p><strong>Address:</strong> Naglabrahan, Guimba, Nueva Ecija</p>
+                <p><strong>Course:</strong> Information Technology</p>
+                <p><strong>Email:</strong> <a href="mailto:jwmacasa23@gmail.com">jwmacasa23@gmail.com</a></p>
+                <p><strong>Contact Number:</strong> <a href="tel:09563992886">09563992886</a></p>
+                <p><strong>Introduction:</strong> I am a hardworking and patient student who is interested in technology. I am still improving my programming and problem-solving skills. I enjoy cycling and learning new things about computers.</p>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Educational Background</h2>
+            <div class="card">
+                <h3>College</h3>
+                <p><strong>Our Lady of the Sacred Heart College of Guimba</strong></p>
+                <p>Bachelor of Science in Information Technology (BSIT) - First Year</p>
+                <h3>Senior High School</h3>
+                <p>Add your senior high school name, strand, and graduation year here.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <article class="card">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Basic computer troubleshooting</li>
+                        <li>Windows installation</li>
+                        <li>Basic computer systems servicing</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Programming Knowledge</h3>
+                    <ul>
+                        <li>Java - beginner level</li>
+                        <li>HTML - basic webpage structure</li>
+                        <li>CSS - basic webpage styling</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Personal Competencies</h3>
+                    <ul>
+                        <li>Hardworking</li>
+                        <li>Patient and disciplined</li>
+                        <li>Willing to learn and improve</li>
+                        <li>Respectful and responsible</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="java" class="section">
+            <h2>Java Code</h2>
+            <p class="section-intro">Basketball Score Analyzer - a Java console program that records the scores of 12 players, calculates the total and average, finds the highest and lowest scores, and displays the scores in descending order.</p>
+            <div class="code-card">
+<pre><code>import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int[] scores = new int[12];
+        int total = 0;
+
+        for (int i = 0; i &lt; scores.length; i++) {
+            System.out.print("Enter score of Player " + (i + 1) + ": ");
+            scores[i] = input.nextInt();
+
+            while (scores[i] &lt; 0) {
+                System.out.print("Invalid score. Enter a nonnegative score: ");
+                scores[i] = input.nextInt();
+            }
+
+            total += scores[i];
+        }
+
+        double average = (double) total / scores.length;
+
+        int highest = scores[0];
+        int lowest = scores[0];
+
+        for (int i = 1; i &lt; scores.length; i++) {
+            if (scores[i] &gt; highest) {
+                highest = scores[i];
+            }
+
+            if (scores[i] &lt; lowest) {
+                lowest = scores[i];
+            }
+        }
+
+        Arrays.sort(scores);
+
+        System.out.println("\\nTotal Points: " + total);
+        System.out.println("Average Points: " + average);
+        System.out.println("Highest Score: " + highest);
+        System.out.println("Lowest Score: " + lowest);
+
+        System.out.println("Scores in Descending Order:");
+
+        for (int i = scores.length - 1; i &gt;= 0; i--) {
+            System.out.println(scores[i]);
+        }
+
+        input.close();
+    }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 John Wayne B. Macasa | BSIT Student Portfolio</p>
+    </footer>
+</body>
+</html>
